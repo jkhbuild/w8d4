@@ -14,7 +14,12 @@ class Clock {
 
   printTime() {
     // Format the time in HH:MM:SS
-    let formattedTime = this.hours + ":" + this.minutes + ":" + this.seconds;
+    let formattedTime =
+      String(this.hours).padStart(2, 0) +
+      ":" +
+      String(this.minutes).padStart(2, 0) +
+      ":" +
+      String(this.seconds).padStart(2, 0);
     // Use console.log to print it.
     console.log(formattedTime);
   }
